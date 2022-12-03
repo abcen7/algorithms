@@ -26,11 +26,10 @@ def bfs(start_point, search_request, _graph):
             else:
                 search_queue += _graph[node]
                 visited += [node]
-    return len(visited)
+    return -1
 
 
 result = bfs(start_node, end_node, graph)
 
 with open('output.txt', mode='w') as file:
     file.write(str(result))
-# pprint.pprint(graph)
